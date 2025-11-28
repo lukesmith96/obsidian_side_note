@@ -122,28 +122,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - [ ] Custom positioning options
 - [ ] Multiple vault support
 - [ ] Template support
-- [ ] iCloud sync for drafts
 - [ ] Custom themes
 
-## 🐛 Known Issues
-
-- Window may not appear on secondary displays - working on multi-monitor support
-- Very long notes may cause performance issues - optimization in progress
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- Inspired by [SideNotes](https://www.apptorium.com/sidenotes)
 - Built with [swift-markdown-ui](https://github.com/gonzalezreal/swift-markdown-ui)
 - Obsidian integration via [Advanced URI](https://github.com/Vinzent03/obsidian-advanced-uri)
 
-## 💬 Support
-
-Having issues? Please check the [Issues](../../issues) page or create a new issue.
-
----
 
 <p align="center">Made with ❤️ for the Obsidian community</p>
