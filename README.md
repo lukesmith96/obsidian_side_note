@@ -24,6 +24,13 @@ A beautiful, lightweight macOS notes app that floats above all windows and syncs
 - Quick task lists that stay visible
 - Daily journaling without switching apps
 
+<p align="center">
+  <img src="screenshots/full_view_edit.png" alt="New daily note view" width="512">
+  <img src="screenshots/markdown_view.png" alt="Markdown view">
+  <img src="screenshots/settings.png" alt="Settings">
+  <img src="screenshots/menu_bar.png" alt="Menu Bar">
+</p>
+
 ### 📋 Requirements
 
 - macOS 13.0 (Ventura) or later

@@ -21,7 +21,7 @@ struct ObsidianSideNoteApp: App {
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
-    var window: NSWindow?  // Changed from NSPanel? to NSWindow?
+    var window: NSWindow?
     var menu: NSMenu?
     
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         
         if let button = statusItem?.button {
-            button.image = NSImage(systemSymbolName: "note.text", accessibilityDescription: "Quick Notes")
+            button.image = NSImage(systemSymbolName: "text.line.3.summary", accessibilityDescription: "Quick Notes")
         }
         
         // Create the menu
@@ -93,7 +93,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Define window size
         let windowWidth: CGFloat = 350
-        let windowHeight: CGFloat = 500
+        let windowHeight: CGFloat = 525
         
         // Calculate position for top right (with some padding from edge)
         let padding: CGFloat = 10
@@ -108,7 +108,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Create a custom floating window - this allows it to become key and accept input
         let window = FloatingWindow(
             contentRect: NSRect(x: xPosition, y: yPosition, width: windowWidth, height: windowHeight),
-            styleMask: [.borderless, .fullSizeContentView],  // Changed: added fullSizeContentView
+            styleMask: [.borderless, .fullSizeContentView],
             backing: .buffered,
             defer: false
         )

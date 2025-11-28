@@ -32,7 +32,7 @@ struct ContentView: View {
                         VStack(spacing: 0) {
                             TextField("Title", text: $noteTitle)
                                 .textFieldStyle(.plain)
-                                .font(.system(size: 18, weight: .semibold))
+                                .font(.system(size: 16, weight: .semibold))
                                 .padding(.horizontal, 16)
                                 .padding(.top, 16)
                                 .padding(.bottom, 12)
@@ -99,12 +99,12 @@ struct ContentView: View {
                 }
             }
         }
-        .frame(minWidth: 350, maxWidth: 350, minHeight: 400, maxHeight: 600)
-        .background(VisualEffectView(material: .hudWindow, blendingMode: .behindWindow))  // Changed material
-        .clipShape(RoundedRectangle(cornerRadius: 12))  // Add this line
+        .frame(minWidth: 350, minHeight: 400)
+        .background(VisualEffectView(material: .hudWindow, blendingMode: .behindWindow))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
         .onAppear {
             if mode != .settings {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
                     isTextEditorFocused = true
                     }
             }
@@ -149,7 +149,7 @@ struct ContentView: View {
                 showSaveSuccess = true
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 noteText = ""
                 noteTitle = ""
                 showSaveSuccess = false
@@ -298,12 +298,12 @@ struct MarkdownEditorView: View {
                 ScrollView {
                     Markdown(text)
                         .markdownTextStyle(\.text) {
-                            FontSize(14)
+                            FontSize(16)
                             ForegroundColor(.primary)
                         }
                         .markdownTextStyle(\.code) {
                             FontFamilyVariant(.monospaced)
-                            FontSize(13)
+                            FontSize(14)
                             BackgroundColor(Color(NSColor.controlBackgroundColor).opacity(0.5))
                         }
                         .markdownBlockStyle(\.codeBlock) { configuration in
@@ -311,7 +311,7 @@ struct MarkdownEditorView: View {
                                 .padding()
                                 .markdownTextStyle {
                                     FontFamilyVariant(.monospaced)
-                                    FontSize(13)
+                                    FontSize(14)
                                 }
                                 .background(Color(NSColor.controlBackgroundColor).opacity(0.3))
                                 .cornerRadius(8)
@@ -327,10 +327,10 @@ struct MarkdownEditorView: View {
                 .background(Color(NSColor.textBackgroundColor).opacity(0.3))
             } else {
                 TextEditor(text: $text)
-                    .font(.system(size: 14))
+                    .font(.system(size: 16))
                     .focused($isFocused)
                     .scrollContentBackground(.hidden)
-                    .padding(8)
+                    .padding(14)
                     .background(Color(NSColor.textBackgroundColor).opacity(0.3))
             }
         }
